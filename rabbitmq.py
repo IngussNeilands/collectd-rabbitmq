@@ -137,6 +137,7 @@ class Broker():
                 datapoint.type_instance = metric
                 datapoint.plugin = PLUGIN_NAME
                 dim_string = self._format_dimensions(dimensions)
+                dim_string = dimensions['name']
                 datapoint.plugin_instance = self.broker_name + dim_string
                 datapoint.values = (value,)
 
